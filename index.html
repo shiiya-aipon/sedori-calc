@@ -355,7 +355,7 @@
     <div class="input-row">
       <div class="input-label">配送料<span>発送コスト</span></div>
       <div class="input-wrap">
-        <input type="number" id="shipping" placeholder="700" inputmode="numeric">
+        <input type="number" id="shipping" placeholder="0" inputmode="numeric">
         <span class="input-unit">円</span>
       </div>
     </div>
@@ -439,7 +439,7 @@
   document.querySelectorAll('input').forEach(el => el.addEventListener('input', calculate));
 
   // 初期値
-  document.getElementById('shipping').value = 700;
+  document.getElementById('shipping').value = '';
   document.getElementById('fee').value = 10;
 
   function calculate() {
@@ -557,7 +557,7 @@
   function clearAll() {
     document.getElementById('price').value    = '';
     document.getElementById('cost').value     = '';
-    document.getElementById('shipping').value = 700;
+    document.getElementById('shipping').value = '';
     document.getElementById('fee').value      = 10;
     resetResults();
   }
